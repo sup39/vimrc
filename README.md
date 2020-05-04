@@ -5,27 +5,27 @@ and to record the evolutionary history of my vimrc.
 Not suitable for others now, but I will try to improve it.
 
 ## Installation
-### Install [vim-plug](https://github.com/junegunn/vim-plug)
-```sh
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
 ### Clone this repo
 ```sh
 git clone https://github.com/sup39/vimrc $HOME/.vim/sup39
 ```
 ### Import in your vimrc
-You can simply use it.
+In your vimrc:
 ```vim
-" In your vimrc
+" If you want to use vim-plug that I'm using:
+" This script will install vim-plug automatically.
+" Make sure to source plug.vim BEFORE vimrc
+source $HOME/.vim/sup39/plug.vim
+
 " set your `mapleader` and `maplocalleader` here if you want
-source $HOME/.vim/sup39/sup39.vimrc
+source $HOME/.vim/sup39/vimrc
 " you can override my settings here
 ```
-Or maybe make a Activate Command.
+
+Alternatively, you can make a activate command to source it manually.
 ```vim
 " In your vimrc
-command Sup39Source source $HOME/.vim/sup39/sup39.vimrc
+command Sup39Source source $HOME/.vim/sup39/vimrc
 " anywhere when you want to activate it
 :Sup39Source
 " You may need to :e to trigger the autocmd
