@@ -8,9 +8,6 @@ endif
 
 " plugin
 call plug#begin('~/.vim/plugged')
-  " basic
-  Plug 'tpope/vim-sensible'
-
   " markdown syntax
   Plug 'plasticboy/vim-markdown'
   let g:vim_markdown_new_list_item_indent = 0

@@ -39,8 +39,11 @@ nnoremap <leader>dm :ALEGoToDefinition<CR>
 nnoremap <leader>dl :ALEDetail<CR>
 " external
 nnoremap <leader>m :w<CR>:make<CR>
+" syntax
+nnoremap <leader>S :syntax sync fromstart<CR>
 " debug
-nnoremap <leader>X :exe getline('.')<CR>
+nnoremap <leader>x :exe getline('.')<CR>
+nnoremap <leader>X :exe join(getline('.', '$'), "\n")<CR>
 nnoremap <leader>H :echo synIDattr(synID(line("."),col("."),1),"name")<CR>
 
 " filetype-dependent
@@ -90,3 +93,8 @@ let g:vim_indent_cont = 0
 
 " completion
 set completeopt=menu,menuone,noselect,noinsert
+
+" status bar
+set laststatus=2
+set ruler
+set wildmenu
