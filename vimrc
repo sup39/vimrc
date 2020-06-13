@@ -84,6 +84,7 @@ set encoding=utf-8
 set backspace=indent,eol,start
 set nocompatible
 set nofoldenable
+set background=dark
 
 " indent
 set list listchars=tab:\▸\-
@@ -101,3 +102,6 @@ set completeopt=menu,menuone,noselect,noinsert
 set laststatus=2
 set ruler
 set wildmenu
+
+" command
+command Sup39Update !cd $HOME/.vim/sup39 && git pull
