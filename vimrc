@@ -91,6 +91,9 @@ set tabstop=2 shiftwidth=2 softtabstop=2 expandtab smarttab
 set autoindent smartindent
 let g:vim_indent_cont = 0
 
+" search
+set incsearch
+
 " completion
 set completeopt=menu,menuone,noselect,noinsert
 
