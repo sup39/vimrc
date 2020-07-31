@@ -9,6 +9,8 @@ if !exists('maplocalleader')
   noremap <localleader> <nop>
 endif
 inoremap jk <ESC>
+inoremap Jk <ESC>
+inoremap JK <ESC>
 " file
   " save
   nnoremap <C-S> :w<CR>
@@ -38,7 +40,7 @@ nnoremap <leader>db :ALEGoToDefinition -tab<CR>
 nnoremap <leader>dm :ALEGoToDefinition<CR>
 nnoremap <leader>dl :ALEDetail<CR>
 " external
-nnoremap <leader>m :w<CR>:make<CR>
+nnoremap <leader>m :w<CR>:!make<CR>
 " syntax
 nnoremap <leader>S :syntax sync fromstart<CR>
 " debug
@@ -62,6 +64,7 @@ augroup sup39_auto
       \'#include "'.substitute(@%, '\.\zsc\ze\(pp\)\?$', 'h', '').'"')<CR>o
     " abbr
     autocmd Filetype c,cpp iabbrev <buffer> #i #include
+    autocmd Filetype c,cpp iabbrev <buffer> #I #include
   " markdown
     " plugin
     autocmd Filetype markdown nnoremap <localleader>p :MarkdownPreview<CR>
@@ -75,6 +78,8 @@ augroup sup39_auto
     autocmd FileType make,java,python setlocal noexpandtab
     " syntax sync
     autocmd FileType markdown,vue syntax sync fromstart
+    " run
+    autocmd FileType javascript nnoremap <localleader>r :w<CR>:!node %<CR>
 augroup END
 
 " basic
